@@ -8,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Card {
   course:string = 'Angular desde Cero';
+
+  cardData = {
+    imageUrl:'https://via.placeholder.com/150',
+    title:'Card Title',
+    description: 'Card Description',
+  }
+
+  onTitleChange(event:any):void {
+    this.cardData.title = event.target.value;
+  }
+
+  changeTitle():void {
+    this.cardData.title = "Nuevo titulo";
+  }
 }
